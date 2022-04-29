@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+    font-family: '標楷體';
+    /*overflow: hidden;*/
+}
+
+/*body .main*/
+.main{
+        display: flex;
+        width: 1024px;
+        padding: 0 12px;
+        margin: 10px auto;
+        text-align: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        /*background-color: beige;*/
+}
+/*畫線border*/
+body>*:not(aside, section),
+aside>*,
+section>*{
+        border: 1px solid lemonchiffon;
+}
+/* .top*/
+.top{
+        flex-basis: 1000px;
+        height: 65px;
+        background-color: lightcyan;
+}
+/* aside */
+.aside{
+        flex-basis: 215px;
+        height: calc(768px - 65px - 20px);
+        display: flex;
+        flex-direction: column;
+        background-color: cornflowerblue;
+}
+/* .aside header .main */
+.menu{
+        flex-basis: calc(100% - 25px);
+        
+}
+.menu-header{
+        font-weight: 500;
+        font-size: 24px;
+        color: lightsalmon;
+        margin: 20px auto;
+        text-decoration: underline;
+}
+/*在.menu的下一層a */
+.menu>a {
+        display: inline-block;
+        margin-bottom: 10px;
+        /*display: block; */
+        /*block 斷行 可以調width height */
+        /* inline block 不斷行 可以調width height*/
+        text-decoration: none;
+        width: 200px;
+        height: 35px;
+        line-height: 35px;
+        color: black;
+        font-size: 16px;
+        background: url("./images/menu1.png") no-repeat ;
+        
+}
+.menu>a:hover{
+        background: url("./images/menu2.png") no-repeat;
+}
+/* aside update*/
+.update{
+        flex-basis: 25px;
+        font-family: '標楷體';
+        color: black;
+        text-align: center;
+        font-size: 16px;
+    }
+/*section*/
+.section{
+        flex-basis: calc(1000px - 215px);
+        display: flex;
+        flex-direction: column;
+        /*background-color: lightgrey;*/
+}
+.marquee{
+        flex-basis: 29px;
+        padding: 0 calc((100% - 770px - 2px) /2);
+        font-family: '標楷體';
+        font-size: 24px;
+        color: blue;
+        background-color: azure;
+}
+.content{
+        flex-basis: calc(100% - 29px);
+}
+.content>iframe{
+        width: 100%;
+        height: 100%;
+}
+.footer{
+        flex-basis: 1000px;
+        height: 20px;
+        background-color: lightskyblue;
+        font-family: '標楷體';
+        color: black;
+        text-align: center;
+        font-size: 16px;
+}
